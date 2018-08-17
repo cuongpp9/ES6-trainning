@@ -1,0 +1,10 @@
+{
+  "name": "es6trainning",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "node ES6-Trainning/demo.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
