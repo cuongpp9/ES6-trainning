@@ -20,10 +20,11 @@ console.log(`Fifteen is ${a+b}
 and fifty four is ${a*b}`);
 console.log(`a=b? ${a==b? 'true':'false'}`);
 
-function tag(strings) {
+function tag(strings, ...value) {
     console.log(strings.raw[0]);
+    console.log(value);
   }
-tag `string text line 1 \n string text line 2`;
+tag `string text line 1 ${input.a} ${input.b} string text line 2`;
 
 ////////////////////////////Multi-line///////////////////////////
 console.log(`first name = ${input.firstName}
@@ -43,6 +44,7 @@ const n1 = 1, n2 = 2, n3 = 3;
     n3,
 };
 
+////method
 const lib = {
     sum(a,b){return a+b; },
     mult(a,b){return a*b;}
