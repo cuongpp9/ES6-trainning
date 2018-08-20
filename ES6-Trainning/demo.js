@@ -7,7 +7,7 @@ const input = {
 
 ////////////////////////////Default parameter///////////////////////////
 function defaultParameter(firstName, lastName, fullName = firstName + lastName){
-    lastName = lastName || 'abc';
+    lastName = lastName || 'abc'; // lastName = (typeof lastName !== 'undefined') ?   lastName: "abc";
     return [firstName, lastName, fullName];
 }
 
@@ -15,7 +15,7 @@ console.log(defaultParameter(input.firstName));
 console.log(defaultParameter(input.firstName, input.lastName));
 
 ////////////////////////////TemplateLiterals///////////////////////////
-const {a,b} = input;
+const {a,b} = input; //Destructuring assignment
 console.log(`Fifteen is ${a+b}
 and fifty four is ${a*b}`);
 console.log(`a=b? ${a==b? 'true':'false'}`);
@@ -41,8 +41,9 @@ const n1 = 1, n2 = 2, n3 = 3;
   obj = {
     n1,
     n2,
-    n3,
 };
+obj.n3 = n3;
+console.log(obj);
 
 ////method
 const lib = {
