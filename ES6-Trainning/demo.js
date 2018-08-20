@@ -6,7 +6,7 @@ const input = {
 }
 
 ////////////////////////////Default parameter///////////////////////////
-defaultParameter = (firstName, lastName, fullName = firstName + lastName) =>{
+defaultParameter = (firstName = 'bean', lastName, fullName = firstName + lastName) =>{
     lastName = lastName || 'abc'; // lastName = (typeof lastName !== 'undefined') ?   lastName: "abc";
     return [firstName, lastName, fullName];
 }
