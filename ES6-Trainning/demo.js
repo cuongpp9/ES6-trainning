@@ -6,7 +6,7 @@ const input = {
 }
 
 ////////////////////////////Default parameter///////////////////////////
-function defaultParameter(firstName, lastName, fullName = firstName + lastName){
+defaultParameter = (firstName, lastName, fullName = firstName + lastName) =>{
     lastName = lastName || 'abc'; // lastName = (typeof lastName !== 'undefined') ?   lastName: "abc";
     return [firstName, lastName, fullName];
 }
@@ -20,7 +20,7 @@ console.log(`Fifteen is ${a+b}
 and fifty four is ${a*b}`);
 console.log(`a=b? ${a==b? 'true':'false'}`);
 
-function tag(strings, ...value) {
+tag = (strings, ...value) =>{
     console.log(strings.raw[0]);
     console.log(value);
   }
@@ -45,9 +45,33 @@ const n1 = 1, n2 = 2, n3 = 3;
 obj.n3 = n3;
 console.log(obj);
 
-////method
 const lib = {
     sum(a,b){return a+b; },
     mult(a,b){return a*b;}
 }
 console.log(lib.sum(1,2));
+
+///////////////Arrow function////////////////
+const arrayNumber = [4,5,6,7];
+
+///ES5
+// const threeTimes = arrayNumber.map(function (x){
+//     console.log(x*3);
+// });
+
+
+///ES6
+const threeTimes = arrayNumber.map((x) => {
+    console.log(x*3);
+});
+
+
+////////////Promises///////////////
+const promises = new Promise((resolve, reject) =>{
+    if (Math.random() * 1 < 90) {
+        console.log('resolving the promise ...');
+        resolve('Hello, Promises!');
+    }
+    reject(new Error('In 10% of the cases, I fail. Miserably.'));
+
+})
