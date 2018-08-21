@@ -16,7 +16,7 @@ const person = {
 person.score();
 person.count();
 
-/*
+
 //Arrow function click button
 const button = document.querySelector('#pushy');
 button.addEventListener('click', () => {
@@ -70,7 +70,6 @@ const orderChildren = function() {
 }
 
 x = orderChildren(1, 123, 500, 115, 44, 88); //<=> arguments = [1, 123, 500, 115, 44, 88] = [...rest] 
-*/
 
 ///Asynchronous//////
 console.log('1');
