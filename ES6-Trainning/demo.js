@@ -16,7 +16,7 @@ const person = {
 person.score();
 person.count();
 
-
+/*
 //Arrow function click button
 const button = document.querySelector('#pushy');
 button.addEventListener('click', () => {
@@ -70,8 +70,7 @@ const orderChildren = function() {
 }
 
 x = orderChildren(1, 123, 500, 115, 44, 88); //<=> arguments = [1, 123, 500, 115, 44, 88] = [...rest] 
-
-
+*/
 
 ///Asynchronous//////
 console.log('1');
@@ -98,16 +97,21 @@ function first(){
 
 
 ///Callback////
-function startWork(work, callback) {
+function startWork(work, callback, callback2) {
     console.log(`Start to ${work}`);
     if(callback){
         console.log("callback1");
-        callback();
+        if(callback2){
+            console.log("callback2");
+        }
     }
   }
   
-  function finishWork() {
-     console.log('Finish working!');
+  function call1() {
+     console.log('call1 working!');
   }
+  function call2() {
+    console.log('call2 working!');
+ }
   
-  startWork('wash clothes', finishWork);
+  startWork('wash clothes', call1, call2);
