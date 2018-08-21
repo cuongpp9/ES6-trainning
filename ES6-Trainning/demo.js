@@ -73,21 +73,21 @@ x = orderChildren(1, 123, 500, 115, 44, 88); //<=> arguments = [1, 123, 500, 115
 
 ///Asynchronous//////
 console.log('1');
-setTimeout(function afterTwoSeconds() {
+setTimeout(afterTwoSeconds =() => {
   console.log('2');
 }, 2000);
 console.log('3');
 
 
 ////Asynchronous and callback////
-function first(){
+first = () =>{
     console.log("function first!")
     setTimeout( function(){
       console.log("callback function first!");
     }, 500 );
   }
   
-  function second(){
+second = () =>{
     console.log("function second!");
   }
   
@@ -96,7 +96,7 @@ function first(){
 
 
 ///Callback////
-function startWork(work, callback, callback2) {
+startWork = (work, callback, callback2) => {
     console.log(`Start to ${work}`);
     if(callback){
         console.log("callback1");
@@ -106,11 +106,11 @@ function startWork(work, callback, callback2) {
     }
   }
   
-  function call1() {
+call1 = () => {
      console.log('call1 working!');
   }
-  function call2() {
+call2 = () => {
     console.log('call2 working!');
  }
   
-  startWork('wash clothes', call1, call2);
+startWork('wash clothes', call1, call2);
