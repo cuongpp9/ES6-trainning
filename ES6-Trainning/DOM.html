@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h1>DOM Trainning</h1>
+        <div>
+            <span>This is span</span>
+            <h1 id='hello'>Say hello!</h1>
+            <p id="nodeH1"></p>
+            <p id='pName'>AbC</p>
+            <button onclick="displayDate()">Show Date</button>
+            <p id="demoDate"></p>
+            <button id="btnListener">Show Arlet</button>
+        </div>
+    </body>
+
+    <script>
+        let h1 = document.getElementById("hello").innerHTML; //DOM element truy xuat den Element cua HTML thong qua ID
+        document.getElementById("pName").innerHTML = h1+ " Pham Cuong."; //DOM HTML -> Thay doi cac noi dung cua Element
+        document.getElementById("hello").style.color = "blue"; // DOM CSS --> Thay doi cac thuoc tinh CSS cua Element
+        function displayDate() {
+            document.getElementById("demoDate").innerHTML = Date(); //DOM Event
+        }
+        document.getElementById("btnListener").addEventListener("click", function(){ //Dom Listener
+                alert("Hello World!");
+        });
+        document.getElementById("nodeH1").innerHTML = document.getElementById("hello").childNodes[0].nodeValue;//navigation Dom
+    </script>
+
+</html>

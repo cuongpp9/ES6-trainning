@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node ES6-Trainning/demo.js"
+    "start": "npm-run-all --parallel openPromises openThis",
+    "openPromises": "node ES6-Trainning/promises.js",
+    "openThis": "node ES6-Trainning/thisArrowFunction.js"
+    
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "npm-run-all": "3.1.1"
+    "npm-run-all": "^3.1.1"
   }
 }
