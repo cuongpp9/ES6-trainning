@@ -42,5 +42,7 @@ promiseAll('pham','cuong','Viet Nam');
 let asynAwait = async () =>{
     let asyncAwaitPromise =  await demoNormalPromise('Son', 'Tung');
     console.log(asyncAwaitPromise);
+    let asyncAwaitAllPromise = await demoPromiseCountry(asyncAwaitPromise, 'Viet Nam');
+    console.log(asyncAwaitAllPromise);
 }
 asynAwait();
