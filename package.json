@@ -6,7 +6,6 @@
     "start": "npm-run-all --parallel openPromises openThis",
     "openPromises": "node ES6-Trainning/promises.js",
     "openThis": "node ES6-Trainning/thisArrowFunction.js"
-    
   },
   "author": "",
   "license": "ISC",

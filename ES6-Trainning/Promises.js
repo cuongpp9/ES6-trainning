@@ -10,8 +10,8 @@ let demoNormalPromise = (firstName, lastname) =>{
     });
 }
 
-demoNormalPromise('pham','cuong')
-.then((success => demoNormalPromise(success, 'cuong')))
+demoNormalPromise('react','redux')
+.then((success => demoNormalPromise(success, 'trainning')))
 .then(success => console.log(`full name = ${success}`))
 .catch((error)=>console.log(`Error: ${error}`));
 
@@ -29,14 +29,7 @@ let demoPromiseCountry = (name, country) =>{
     });
 }
 
-let promiseAll = (firstName, fullName, country) =>{
-    demoNormalPromise(firstName, fullName)
-    .then(result => demoPromiseCountry(result, country))
-    .then(success => console.log(`Promise All---> ${success}`))
-    .catch(error => console.log('Error:' + error));
-}
-promiseAll('pham','cuong','Viet Nam');
-
+let promiseAll = Promise.all([demoNormalPromise('pham', 'cuong'), demoPromiseCountry('pham cuong', 'viet nam')]).then((result) =>console.log(`PromiseAll, ${result}`));
 
 ///Async Await
 let asynAwait = async () =>{
